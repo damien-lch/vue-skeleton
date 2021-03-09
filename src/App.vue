@@ -12,8 +12,12 @@
         <div class="item">
           <Skeleton width="200" height="200" rounded />
         </div>
-        <div class="item"></div>
-        <div class="item"></div>
+        <div class="item">
+          <Skeleton width="100" height="100" rounded />
+        </div>
+        <div class="item">
+          <Skeleton width="100%" height="100%" borderRadius="0" />
+        </div>
       </div>
     </section>
   </div>
@@ -21,7 +25,7 @@
 
 <script>
 export default {
-  name: "App",
+  name: "App"
 };
 </script>
 
