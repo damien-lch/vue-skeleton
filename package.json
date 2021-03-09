@@ -1,7 +1,7 @@
 {
   "name": "@neiwad/vue-skeleton",
-  "version": "0.0.1",
-  "main": "./dist/vue-skeleton-generator.common.js",
+  "version": "v0.2-alpha",
+  "main": "./dist/vue-skeleton.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
