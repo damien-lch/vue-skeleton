@@ -1,24 +1,9 @@
-# vue-skeleton-generator
-
-## Project setup
-```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# Vue Skeleton 💀
+A simple dynamic skeleton component for Vue.js applications.
+## Props
+| Name | Type | Default
+|--|--|--|
+| Color | String | #E0E0E0
+| Width | String | 100
+| Height | String | 100
+| BorderRadius | String | 8
