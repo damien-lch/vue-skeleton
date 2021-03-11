@@ -1,5 +1,11 @@
 # Vue Skeleton 💀
 A simple dynamic skeleton component for Vue.js applications.
+## Supported Vue.js versions
+Vue2
+## How to install ?
+```
+npm install @neiwad/vue-skeleton
+```
 ## How to use ?
 ```
 <Skeleton width="50%" height="80%" borderRadius="40" />
