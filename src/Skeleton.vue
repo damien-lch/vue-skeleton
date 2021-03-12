@@ -7,11 +7,11 @@ export default {
   props: {
     width: {
       type: String,
-      default: "100",
+      default: "350px",
     },
     height: {
       type: String,
-      default: "100",
+      default: "350px",
     },
     color: {
       type: String,
@@ -23,16 +23,26 @@ export default {
     },
     borderRadius: {
       type: String,
-      default: "8",
+      default: "8px",
     },
   },
   computed: {
     styles() {
       const styles = {
-        width: this.width.includes("%") ? this.width : this.width + "px",
-        height: this.height.includes("%") ? this.height : this.height + "px",
+        width:
+          !this.width.includes("px") &&
+          !this.width.includes("%") &&
+          !this.height.includes("vw")
+            ? this.width + "px"
+            : this.width,
+        height:
+          !this.height.includes("px") &&
+          !this.height.includes("%") &&
+          !this.height.includes("vh")
+            ? this.height + "px"
+            : this.height,
         backgroundColor: this.color,
-        borderRadius: this.rounded ? "50%" : this.borderRadius + "px",
+        borderRadius: this.rounded ? "50%" : this.borderRadius,
       };
       return styles;
     },
