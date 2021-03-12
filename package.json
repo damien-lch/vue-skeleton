@@ -2,7 +2,7 @@
   "author": "neiwad",
   "licence": "MIT",
   "name": "@neiwad/vue-skeleton",
-  "version": "v0.1.0-beta.2",
+  "version": "v0.1.0-beta.3",
   "description": "A simple dynamic skeleton component for Vue.js applications.",
   "main": "dist/vue-skeleton.umd.js",
   "module": "dist/vue-skeleton.esm.js",
