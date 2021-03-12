@@ -1,36 +1,48 @@
 {
+  "author": "neiwad",
+  "licence": "MIT",
   "name": "@neiwad/vue-skeleton",
-  "version": "v0.1.0-beta.1",
-  "main": "./dist/vue-skeleton.common.js",
+  "version": "v0.1.0-beta.2",
+  "description": "A simple dynamic skeleton component for Vue.js applications.",
+  "main": "dist/vue-skeleton.umd.js",
+  "module": "dist/vue-skeleton.esm.js",
+  "unpkg": "dist/vue-skeleton.min.js",
+  "browser": {
+    "./sfc": "src/vue-skeleton.vue"
+  },
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "build-bundle": "vue-cli-service build --target lib --name vue-skeleton ./src/index.js"
+    "dev": "vue serve Skeleton.vue",
+    "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/vue-skeleton.umd.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/vue-skeleton.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/vue-skeleton.min.js"
   },
   "files": [
-    "dist/*",
-    "src/*",
-    "public/*",
-    "*.json",
-    "*.js"
+    "dist/*"
   ],
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^2.6.11"
   },
   "devDependencies": {
+    "@rollup/plugin-buble": "^0.21.3",
+    "@rollup/plugin-commonjs": "^11.1.0",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "@vue/eslint-config-prettier": "^6.0.0",
     "babel-eslint": "^10.1.0",
+    "bili": "^5.0.5",
     "eslint": "^6.8.0",
     "eslint-plugin-prettier": "^3.1.3",
     "eslint-plugin-vue": "^6.2.2",
     "prettier": "^1.19.1",
+    "rollup": "^1.17.0",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-scss": "^2.6.1",
+    "rollup-plugin-vue": "^6.0.0",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.10"
   }
 }

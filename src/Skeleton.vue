@@ -1,31 +1,30 @@
 <template>
-  <div class="skeleton" :style="styles"></div>
+  <div class="skeleton" v-bind:style="styles"></div>
 </template>
-
 <script>
 export default {
   name: "skeleton",
   props: {
     width: {
       type: String,
-      default: "100"
+      default: "100",
     },
     height: {
       type: String,
-      default: "100"
+      default: "100",
     },
     color: {
       type: String,
-      default: "#E0E0E0"
+      default: "#E0E0E0",
     },
     rounded: {
       type: Boolean,
-      default: false
+      default: false,
     },
     borderRadius: {
       type: String,
-      default: "8"
-    }
+      default: "8",
+    },
   },
   computed: {
     styles() {
@@ -33,11 +32,11 @@ export default {
         width: this.width.includes("%") ? this.width : this.width + "px",
         height: this.height.includes("%") ? this.height : this.height + "px",
         backgroundColor: this.color,
-        borderRadius: this.rounded ? "50%" : this.borderRadius + "px"
+        borderRadius: this.rounded ? "50%" : this.borderRadius + "px",
       };
       return styles;
-    }
-  }
+    },
+  },
 };
 </script>
 
