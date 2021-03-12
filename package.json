@@ -1,24 +1,21 @@
 {
   "author": "neiwad",
   "licence": "MIT",
-  "name": "@neiwad/vue-skeleton",
-  "version": "v0.1.0-beta.5",
+  "name": "vue-skeleton",
+  "version": "v0.1.0-beta.6",
   "description": "A simple dynamic skeleton component for Vue.js applications.",
-  "main": "dist/vue-skeleton.umd.js",
-  "module": "dist/vue-skeleton.esm.js",
-  "unpkg": "dist/vue-skeleton.min.js",
-  "browser": {
-    "./sfc": "src/vue-skeleton.vue"
-  },
+  "main": "./dist/vue-skeleton.common.js",
   "scripts": {
     "dev": "vue serve Skeleton.vue",
-    "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
-    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/vue-skeleton.umd.js",
-    "build:es": "rollup --config build/rollup.config.js --format es --file dist/vue-skeleton.esm.js",
-    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/vue-skeleton.min.js"
+    "build": "vue-clie-service buils",
+    "build:bundle": "vue-cli-service build --target lib --name vue-skeleton ./src/components/index.js"
   },
   "files": [
-    "dist/*"
+    "dist/*",
+    "src/*",
+    "public/*",
+    "*.json",
+    "*.js"
   ],
   "dependencies": {
     "@vue/compiler-sfc": "^3.0.7",
