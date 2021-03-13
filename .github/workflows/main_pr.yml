@@ -1,10 +1,10 @@
-name: Unit test before PR
+name: Unit Tests Before Pull Request
 on:
   pull_request:
     branches:
       - main
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
