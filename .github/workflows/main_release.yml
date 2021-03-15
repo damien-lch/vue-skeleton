@@ -15,7 +15,7 @@ jobs:
           access: "public"
       - run: npm install
       - run: npm run test:unit
-      - run: npm run build-bundle
+      - run: npm run build
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
