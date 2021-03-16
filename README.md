@@ -7,13 +7,34 @@ A simple dynamic skeleton component for Vue.js applications.
 2.X
 
 ## How to install ?
-
+With NPM
 ```
 npm install @neiwad/vue-skeleton
 ```
-
+With YARN
+```
+yarn add @neiwad/vue-skeleton
+```
 ## How to use ?
-
+### As a global component
+In your main.js
+```
+import Skeleton from "@neiwad/vue-skeleton"
+Vue.component(Skeleton, Skeleton)
+```
+### As a scoped component
+In your view / component
+```
+<script>
+import Skeleton from "@neiwad/vue-skeleton"
+export default {
+  components: {
+    Skeleton
+  }
+};
+</script>
+```
+## Examples
 ```
 <Skeleton width="50%" height="80%" />
 ```
@@ -34,6 +55,10 @@ npm install @neiwad/vue-skeleton
 
 - Width and Height without _px_ or _%_ are set with _px_ by default.
 - Rounded overwrites BorderRadius.
+
+## Next steps
+- Add multiple animations
+- Create a Vue3 version
 
 ## Any issue ?
 
